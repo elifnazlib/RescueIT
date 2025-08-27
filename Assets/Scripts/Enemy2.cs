@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy2 : MonoBehaviour
 {
     [SerializeField] float speed;
 
@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        transform.position += new Vector3(-speed * Time.deltaTime, 0, 0);
+        transform.position += new Vector3(0, -speed * Time.deltaTime, 0);
     }
 
     void OnTriggerEnter2D(Collider2D other)

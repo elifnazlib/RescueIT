@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8366664362317238146}
   - component: {fileID: 6870310715532561720}
-  - component: {fileID: 8617733538292751416}
-  - component: {fileID: 4989114411110176477}
+  - component: {fileID: 4753504994855502229}
+  - component: {fileID: 7394773272003678391}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Enemy2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -1.73, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8617733538292751416
+--- !u!114 &4753504994855502229
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,11 +95,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 859133546132203923}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e877188c4d84f44daf86ba29506a5ae, type: 3}
+  m_Script: {fileID: 11500000, guid: 06a96e696c27b8344a2a9ce265a1b5b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
---- !u!58 &4989114411110176477
+--- !u!58 &7394773272003678391
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,6 +131,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.030188221, y: -0.020125424}
+  m_Offset: {x: 0.04416551, y: -0.0098145865}
   serializedVersion: 2
-  m_Radius: 0.88184834
+  m_Radius: 0.8746366

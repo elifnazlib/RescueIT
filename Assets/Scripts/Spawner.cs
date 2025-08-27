@@ -12,7 +12,9 @@ public class Spawner : MonoBehaviour
 
     IEnumerator Spawn()
     {
-        yield return new WaitForSeconds(3);
+        float randomNum = Random.Range(3f, 7f);
+        yield return new WaitForSeconds(randomNum);
+        
         Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
         StartCoroutine(Spawn());
     }
