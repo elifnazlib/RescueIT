@@ -1,13 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class CountdownController : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _text;
     [SerializeField] private float _timeRemaining;
+    public bool isGameStarted = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +19,7 @@ public class CountdownController : MonoBehaviour
         if (_timeRemaining < 0)
         {
             Destroy(_text);
+            isGameStarted = true;
             return;
         }
 
