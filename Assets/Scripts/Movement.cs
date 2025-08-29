@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Movement : MonoBehaviour
@@ -17,8 +18,11 @@ public class Movement : MonoBehaviour
 
     private bool canMoveLeftAndRight = true;
     private bool canJump = true;
+    private bool canAttack = false;
 
     [SerializeField] Animator animator;
+    [SerializeField] Boss _bossScript;
+    public bool playerAttack = false;
 
     void Start()
     {
@@ -39,6 +43,7 @@ public class Movement : MonoBehaviour
             Debug.Log("Level name: " + SceneManager.GetActiveScene().name);
             canMoveLeftAndRight = true;
             canJump = false;
+            canAttack = true;
         }
     }
 
@@ -52,6 +57,9 @@ public class Movement : MonoBehaviour
         if (_countdownController.isGameStarted)
         {
             horizontal = Input.GetAxisRaw("Horizontal");
+
+            if (horizontal == 0) animator.SetBool("isRunning", false);
+            else animator.SetBool("isRunning", true);
 
             if (canJump == true)
             {
@@ -75,6 +83,16 @@ public class Movement : MonoBehaviour
         {
             animator.SetBool("isJumping", true);
         }
+
+        if (canAttack == true)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                playerAttack = true;
+                animator.SetBool("isPunching", true);
+                StartCoroutine(WaitHalfSeconds());
+            }
+        }
     }
 
     void FixedUpdate()
@@ -82,8 +100,18 @@ public class Movement : MonoBehaviour
         if (canMoveLeftAndRight == true)
         {
             if (_countdownController.isGameStarted)
+            {
                 rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+            }
+                
         }
+    }
+
+    IEnumerator WaitHalfSeconds()
+    {
+        yield return new WaitForSeconds(0.5f);
+        playerAttack = false;
+        animator.SetBool("isPunching", false);
     }
 
     private bool IsGrounded()

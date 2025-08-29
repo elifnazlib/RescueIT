@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Boss : MonoBehaviour
@@ -9,6 +7,7 @@ public class Boss : MonoBehaviour
     [SerializeField] CountdownController _countdownController;
     [SerializeField] float leftValueX;
     [SerializeField] float rightValueX;
+    [SerializeField] Movement _movementScript;
 
     void Update()
     {
@@ -30,6 +29,17 @@ public class Boss : MonoBehaviour
             particleSystem.Play();
             playerTransform.position = new Vector2(other.transform.position.x - 2f, other.transform.position.y);
             transform.position = new Vector2(transform.position.x + 2f, transform.position.y);
+        }
+    }
+
+    void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.CompareTag("Attack") && _movementScript.playerAttack == true)
+        {
+            transform.position = new Vector2(transform.position.x + 2.5f, transform.position.y);
+            _movementScript.playerAttack = false;
+            
+            // TODO: süt oranı azalacak
         }
     }
 }
