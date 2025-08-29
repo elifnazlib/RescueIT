@@ -869,6 +869,9 @@ MonoBehaviour:
     m_Bits: 64
   groundCheckRadius: 0.2
   _countdownController: {fileID: 1533452284}
+  leftValueX: -8.25
+  rightValueX: 8.25
+  animator: {fileID: 1424250669}
 --- !u!61 &1424250668
 BoxCollider2D:
   m_ObjectHideFlags: 0

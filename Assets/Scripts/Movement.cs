@@ -18,6 +18,8 @@ public class Movement : MonoBehaviour
     private bool canMoveLeftAndRight = true;
     private bool canJump = true;
 
+    [SerializeField] Animator animator;
+
     void Start()
     {
         if (SceneManager.GetActiveScene().name == "Level1")
@@ -63,6 +65,15 @@ public class Movement : MonoBehaviour
                     rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
                 }
             }
+        }
+
+        if (IsGrounded())
+        {
+            animator.SetBool("isJumping", false);
+        }
+        else
+        {
+            animator.SetBool("isJumping", true);
         }
     }
 
