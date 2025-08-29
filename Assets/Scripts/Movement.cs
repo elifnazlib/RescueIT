@@ -28,19 +28,16 @@ public class Movement : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Level1")
         {
-            Debug.Log("Level name: " + SceneManager.GetActiveScene().name);
             canJump = true;
             canMoveLeftAndRight = false;
         }
         else if (SceneManager.GetActiveScene().name == "Level2")
         {
-            Debug.Log("Level name: " + SceneManager.GetActiveScene().name);
             canMoveLeftAndRight = true;
             canJump = false;
         }
         else if (SceneManager.GetActiveScene().name == "Level3")
         {
-            Debug.Log("Level name: " + SceneManager.GetActiveScene().name);
             canMoveLeftAndRight = true;
             canJump = false;
             canAttack = true;
@@ -75,14 +72,8 @@ public class Movement : MonoBehaviour
             }
         }
 
-        if (IsGrounded())
-        {
-            animator.SetBool("isJumping", false);
-        }
-        else
-        {
-            animator.SetBool("isJumping", true);
-        }
+        if (IsGrounded()) animator.SetBool("isJumping", false);
+        else animator.SetBool("isJumping", true);
 
         if (canAttack == true)
         {
@@ -103,7 +94,6 @@ public class Movement : MonoBehaviour
             {
                 rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
             }
-                
         }
     }
 

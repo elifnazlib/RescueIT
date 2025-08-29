@@ -18,7 +18,6 @@ public class Boss : MonoBehaviour
             move.x = Mathf.Clamp(move.x, leftValueX, rightValueX);
             transform.position = move;
         }
-
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -38,7 +37,7 @@ public class Boss : MonoBehaviour
         {
             transform.position = new Vector2(transform.position.x + 2.5f, transform.position.y);
             _movementScript.playerAttack = false;
-            
+
             // TODO: süt oranı azalacak
         }
     }

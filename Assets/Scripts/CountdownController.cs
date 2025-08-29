@@ -6,8 +6,7 @@ public class CountdownController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _text;
     [SerializeField] private float _timeRemaining;
     public bool isGameStarted = false;
-
-    // Update is called once per frame
+    
     void Update()
     {
         if (_timeRemaining < 0)
