@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine;
 
 public class Enemy2 : MonoBehaviour
@@ -26,7 +25,5 @@ public class Enemy2 : MonoBehaviour
             
             Destroy(gameObject);
         }
-    }
-
-    
+    }    
 }

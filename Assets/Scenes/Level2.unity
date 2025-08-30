@@ -867,7 +867,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad28d0cf57d3d664e946dcfa4000fe64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 859133546132203923, guid: e808837c3c2c4a04588ba8ed90d449b3, type: 3}
+  enemyPrefab:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   spawnPoint: {fileID: 746578828}
 --- !u!4 &746578828
 Transform:
@@ -913,7 +916,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad28d0cf57d3d664e946dcfa4000fe64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 859133546132203923, guid: 71a07d67f72af4b49a47499950f25097, type: 3}
+  enemyPrefab:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   spawnPoint: {fileID: 789007838}
 --- !u!4 &789007838
 Transform:
@@ -1004,7 +1010,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad28d0cf57d3d664e946dcfa4000fe64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 859133546132203923, guid: 2c831dc5f762a754ca12f4e4f54aea16, type: 3}
+  enemyPrefab:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   spawnPoint: {fileID: 817040152}
 --- !u!4 &817040152
 Transform:
@@ -1050,7 +1059,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad28d0cf57d3d664e946dcfa4000fe64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 859133546132203923, guid: 4672dfb42a66c674a834a9bb3fb730e4, type: 3}
+  enemyPrefab:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   spawnPoint: {fileID: 839636282}
 --- !u!4 &839636282
 Transform:
@@ -1111,7 +1123,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad28d0cf57d3d664e946dcfa4000fe64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 859133546132203923, guid: e808837c3c2c4a04588ba8ed90d449b3, type: 3}
+  enemyPrefab:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   spawnPoint: {fileID: 1020803655}
 --- !u!1 &1028694476
 GameObject:
@@ -1248,7 +1263,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad28d0cf57d3d664e946dcfa4000fe64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 859133546132203923, guid: 4672dfb42a66c674a834a9bb3fb730e4, type: 3}
+  enemyPrefab:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   spawnPoint: {fileID: 1137311507}
 --- !u!4 &1137311507
 Transform:

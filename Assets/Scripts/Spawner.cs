@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] GameObject enemyPrefab;
+    [SerializeField] GameObject [] enemyPrefab;
     [SerializeField] Transform spawnPoint;
     void Start()
     {
@@ -13,9 +13,11 @@ public class Spawner : MonoBehaviour
     IEnumerator Spawn()
     {
         float randomNum = Random.Range(3f, 7f);
+        int randomIndex = Random.Range(0, enemyPrefab.Length);
+
         yield return new WaitForSeconds(randomNum);
         
-        Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+        Instantiate(enemyPrefab[randomIndex], spawnPoint.position, spawnPoint.rotation);
         StartCoroutine(Spawn());
     }
 }

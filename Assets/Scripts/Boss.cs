@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine;
 
 public class Boss : MonoBehaviour
@@ -13,12 +12,17 @@ public class Boss : MonoBehaviour
 
     [SerializeField] Score _scoreScript;
 
+    Rigidbody2D rb;
+    [SerializeField] private float deathForce = 5f;
+    [SerializeField] private float deathTorque = 300f;
+    private int counter = 0;
+
     void Update()
     {
         if (_countdownController.isGameStarted)
         {
             transform.position = Vector2.MoveTowards(transform.position, new Vector2(playerTransform.position.x, transform.position.y), speed * Time.deltaTime);
-            
+
             Vector2 move = transform.position;
             move.x = Mathf.Clamp(move.x, leftValueX, rightValueX);
             transform.position = move;
@@ -47,7 +51,24 @@ public class Boss : MonoBehaviour
             transform.position = new Vector2(transform.position.x + 2.5f, transform.position.y);
             _movementScript.playerAttack = false;
 
-            // TODO: Boss 10 kez attack darbesi alırsa player kazanır
+            counter++;
+            if (counter == 10) BossDeath();
         }
+    }
+
+    void BossDeath()
+    {
+        rb = gameObject.AddComponent<Rigidbody2D>();
+
+        rb.velocity = Vector2.zero;
+        rb.angularVelocity = 0f;
+
+        rb.AddForce(new Vector2(1, 1).normalized * deathForce, ForceMode2D.Impulse);
+        rb.AddTorque(deathTorque);
+
+        GetComponent<CircleCollider2D>().isTrigger = true;
+        FindObjectOfType<Fader>().GetComponent<Fader>().GoToEndLevel();
+        
+        Destroy(gameObject, 5f);
     }
 }
