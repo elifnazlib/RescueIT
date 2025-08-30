@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: "Assets/Scenes/Giri\u015F1.unity"
+    path: Assets/Scenes/Beginning.unity
     guid: d5c0407e18b25b241ab351df60bc6b43
   - enabled: 1
     path: Assets/Scenes/Level1.unity

@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
+  milkAmountText: {fileID: 7700860743055204121, guid: 2e80c84dfe7985c4da14e265a7770df1, type: 3}
 --- !u!58 &4989114411110176477
 CircleCollider2D:
   m_ObjectHideFlags: 0

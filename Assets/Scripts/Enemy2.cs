@@ -1,11 +1,14 @@
+using TMPro;
 using UnityEngine;
 
 public class Enemy2 : MonoBehaviour
 {
     [SerializeField] float speed;
+    private Score _scoreScript;
 
     void Start()
     {
+        _scoreScript = FindAnyObjectByType<Score>();
         Destroy(gameObject, 10f);
     }
 
@@ -18,6 +21,9 @@ public class Enemy2 : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Singleton.Instance.milkAmount -= 1.5f;
+            _scoreScript.ChangeMilkAmountOnScreen(Singleton.Instance.milkAmount);
+            
             Destroy(gameObject);
         }
     }

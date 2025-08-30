@@ -2,6 +2,7 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Fader : MonoBehaviour
 {
@@ -13,10 +14,13 @@ public class Fader : MonoBehaviour
 
     void Start()
     {
-        blackScreen.DOFade(0, fadeInDuration);
         currentSceneName = SceneManager.GetActiveScene().name;
+
+        blackScreen.DOFade(0, fadeInDuration);
+
         if (currentSceneName == "Level1")
         {
+
             blackScreen.DOFade(1, fadeOutDuration).SetDelay(levelDuration).OnComplete(() => SceneManager.LoadScene("Level2"));
         }
         if (currentSceneName == "Level2")
@@ -31,7 +35,4 @@ public class Fader : MonoBehaviour
         Destroy(gameObject);
         blackScreen.DOFade(1, fadeOutDuration).OnComplete(() => SceneManager.LoadScene("Level1"));
     }
-
-
-
 }
