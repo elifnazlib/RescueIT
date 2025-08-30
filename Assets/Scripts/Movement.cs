@@ -21,22 +21,24 @@ public class Movement : MonoBehaviour
     private bool canAttack = false;
 
     [SerializeField] Animator animator;
-    [SerializeField] Boss _bossScript;
     public bool playerAttack = false;
+    private string currentSceneName;
 
     void Start()
     {
-        if (SceneManager.GetActiveScene().name == "Level1")
+        currentSceneName = SceneManager.GetActiveScene().name;
+
+        if (currentSceneName == "Level1")
         {
             canJump = true;
             canMoveLeftAndRight = false;
         }
-        else if (SceneManager.GetActiveScene().name == "Level2")
+        else if (currentSceneName == "Level2")
         {
             canMoveLeftAndRight = true;
             canJump = false;
         }
-        else if (SceneManager.GetActiveScene().name == "Level3")
+        else if (currentSceneName == "Level3")
         {
             canMoveLeftAndRight = true;
             canJump = false;
@@ -55,8 +57,8 @@ public class Movement : MonoBehaviour
         {
             horizontal = Input.GetAxisRaw("Horizontal");
 
-            if (horizontal == 0) animator.SetBool("isRunning", false);
-            else animator.SetBool("isRunning", true);
+            if (horizontal == 0 && currentSceneName == "Level3") animator.SetBool("isRunning", false);
+            else if (horizontal != 0 && currentSceneName == "Level3") animator.SetBool("isRunning", true);
 
             if (canJump == true)
             {
@@ -72,8 +74,8 @@ public class Movement : MonoBehaviour
             }
         }
 
-        if (IsGrounded()) animator.SetBool("isJumping", false);
-        else animator.SetBool("isJumping", true);
+        if (IsGrounded() && currentSceneName == "Level1") animator.SetBool("isJumping", false);
+        else if (!IsGrounded() && currentSceneName == "Level1") animator.SetBool("isJumping", true);
 
         if (canAttack == true)
         {
