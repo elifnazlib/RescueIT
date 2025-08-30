@@ -636,7 +636,7 @@ MonoBehaviour:
   blackScreen: {fileID: 146769035}
   fadeInDuration: 2
   fadeOutDuration: 2
-  levelDuration: 15
+  levelDuration: 30
 --- !u!4 &974842855
 Transform:
   m_ObjectHideFlags: 0
@@ -765,10 +765,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab:
-  - {fileID: 859133546132203923, guid: 71a07d67f72af4b49a47499950f25097, type: 3}
-  - {fileID: 859133546132203923, guid: 2c831dc5f762a754ca12f4e4f54aea16, type: 3}
-  - {fileID: 859133546132203923, guid: e808837c3c2c4a04588ba8ed90d449b3, type: 3}
-  - {fileID: 859133546132203923, guid: 4672dfb42a66c674a834a9bb3fb730e4, type: 3}
+  - {fileID: 859133546132203923, guid: a9f9bb81ad0a57c4aae642d3f0cd6ef1, type: 3}
+  - {fileID: 859133546132203923, guid: 31b1d5e707a085149b148158c0002ae5, type: 3}
+  - {fileID: 859133546132203923, guid: 588b68337f53df447b24a6697cdcde6f, type: 3}
+  - {fileID: 859133546132203923, guid: 3d8ef0ea1a79ae448a4246fe9cfa4496, type: 3}
   spawnPoint: {fileID: 1020803655}
 --- !u!1 &1035166172
 GameObject:

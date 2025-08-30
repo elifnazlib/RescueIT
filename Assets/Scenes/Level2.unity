@@ -868,9 +868,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 859133546132203923, guid: 87ef4817370d1fb4aac292032f8a4897, type: 3}
+  - {fileID: 859133546132203923, guid: 71a07d67f72af4b49a47499950f25097, type: 3}
+  - {fileID: 859133546132203923, guid: 2c831dc5f762a754ca12f4e4f54aea16, type: 3}
+  - {fileID: 859133546132203923, guid: e808837c3c2c4a04588ba8ed90d449b3, type: 3}
   spawnPoint: {fileID: 746578828}
 --- !u!4 &746578828
 Transform:
@@ -917,9 +918,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 859133546132203923, guid: 87ef4817370d1fb4aac292032f8a4897, type: 3}
+  - {fileID: 859133546132203923, guid: 71a07d67f72af4b49a47499950f25097, type: 3}
+  - {fileID: 859133546132203923, guid: 2c831dc5f762a754ca12f4e4f54aea16, type: 3}
+  - {fileID: 859133546132203923, guid: e808837c3c2c4a04588ba8ed90d449b3, type: 3}
   spawnPoint: {fileID: 789007838}
 --- !u!4 &789007838
 Transform:
@@ -1011,9 +1013,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 859133546132203923, guid: 87ef4817370d1fb4aac292032f8a4897, type: 3}
+  - {fileID: 859133546132203923, guid: 71a07d67f72af4b49a47499950f25097, type: 3}
+  - {fileID: 859133546132203923, guid: 2c831dc5f762a754ca12f4e4f54aea16, type: 3}
+  - {fileID: 859133546132203923, guid: e808837c3c2c4a04588ba8ed90d449b3, type: 3}
   spawnPoint: {fileID: 817040152}
 --- !u!4 &817040152
 Transform:
@@ -1060,9 +1063,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 859133546132203923, guid: 87ef4817370d1fb4aac292032f8a4897, type: 3}
+  - {fileID: 859133546132203923, guid: 71a07d67f72af4b49a47499950f25097, type: 3}
+  - {fileID: 859133546132203923, guid: 2c831dc5f762a754ca12f4e4f54aea16, type: 3}
+  - {fileID: 859133546132203923, guid: e808837c3c2c4a04588ba8ed90d449b3, type: 3}
   spawnPoint: {fileID: 839636282}
 --- !u!4 &839636282
 Transform:
@@ -1124,9 +1128,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 859133546132203923, guid: 87ef4817370d1fb4aac292032f8a4897, type: 3}
+  - {fileID: 859133546132203923, guid: 71a07d67f72af4b49a47499950f25097, type: 3}
+  - {fileID: 859133546132203923, guid: 2c831dc5f762a754ca12f4e4f54aea16, type: 3}
+  - {fileID: 859133546132203923, guid: e808837c3c2c4a04588ba8ed90d449b3, type: 3}
   spawnPoint: {fileID: 1020803655}
 --- !u!1 &1028694476
 GameObject:
@@ -1264,9 +1269,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 859133546132203923, guid: 87ef4817370d1fb4aac292032f8a4897, type: 3}
+  - {fileID: 859133546132203923, guid: 71a07d67f72af4b49a47499950f25097, type: 3}
+  - {fileID: 859133546132203923, guid: 2c831dc5f762a754ca12f4e4f54aea16, type: 3}
+  - {fileID: 859133546132203923, guid: e808837c3c2c4a04588ba8ed90d449b3, type: 3}
   spawnPoint: {fileID: 1137311507}
 --- !u!4 &1137311507
 Transform:
@@ -1945,7 +1951,7 @@ MonoBehaviour:
   blackScreen: {fileID: 1028694478}
   fadeInDuration: 2
   fadeOutDuration: 2
-  levelDuration: 15
+  levelDuration: 30
 --- !u!4 &1749027980
 Transform:
   m_ObjectHideFlags: 0
