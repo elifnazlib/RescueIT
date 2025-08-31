@@ -29,7 +29,7 @@ public class EndScene : MonoBehaviour
         StartCoroutine(MoveToTarget(princess, princess.transform.position, new Vector2(-3f, princess.transform.position.y), 5f));
         yield return new WaitForSeconds(8f);
 
-        Destroy(player);
+        player.GetComponent<SpriteRenderer>().enabled = false;
         Destroy(princess);
 
         bgImage.SetActive(false);
