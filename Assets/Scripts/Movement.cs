@@ -24,6 +24,8 @@ public class Movement : MonoBehaviour
     public bool playerAttack = false;
     private string currentSceneName;
 
+    [SerializeField] AudioSource audioSource;
+
     void Start()
     {
         currentSceneName = SceneManager.GetActiveScene().name;
@@ -64,6 +66,7 @@ public class Movement : MonoBehaviour
             {
                 if (Input.GetButtonDown("Jump") && IsGrounded())
                 {
+                    audioSource.Play();
                     rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
                 }
 

@@ -17,6 +17,10 @@ public class Boss : MonoBehaviour
     [SerializeField] private float deathTorque = 300f;
     private int counter = 0;
 
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip bossDamageSFX;
+    [SerializeField] AudioClip punchSFX;
+
     void Update()
     {
         if (_countdownController.isGameStarted)
@@ -33,6 +37,8 @@ public class Boss : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            audioSource.PlayOneShot(bossDamageSFX, 0.2f);
+
             particleSystem.transform.position = new Vector2(playerTransform.position.x + 1f, playerTransform.position.y + 2f);
             particleSystem.Play();
 
@@ -48,6 +54,8 @@ public class Boss : MonoBehaviour
     {
         if (other.CompareTag("Attack") && _movementScript.playerAttack == true)
         {
+            audioSource.PlayOneShot(punchSFX);
+
             transform.position = new Vector2(transform.position.x + 2.5f, transform.position.y);
             _movementScript.playerAttack = false;
 
